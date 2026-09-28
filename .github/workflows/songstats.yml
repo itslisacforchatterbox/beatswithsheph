@@ -1,0 +1,36 @@
+name: Songstats Spotify Scraper
+
+on:
+  schedule:
+    - cron: "0 20 * * *"   # daily at 20:00 UTC (~6am Sydney)
+  workflow_dispatch:        # allows manual runs from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install curl_cffi requests
+
+      - name: Run scraper
+        working-directory: SocialsScraper
+        run: python songstats_spotify_scraper.py
+
+      - name: Commit updated database
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add SocialsScraper/socials_cache.db
+          git diff --cached --quiet || git commit -m "Update Songstats data $(date -u +%F)"
+          git push
