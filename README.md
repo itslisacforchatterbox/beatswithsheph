@@ -47,7 +47,7 @@ Keep artists informed about where they can play, apply and network in Sydney, wi
 | --- | --- |
 | Collect from RSS and Atom feeds | Working |
 | Collect from an agency tour list page (Cult Artists) | Working |
-| Clean, tag type, suburb, venue, deadline (keywords) | Working | (in process of implementing gemini prompts so that tour dates and locations can be accurately extracted from all forms of sources
+| Clean, tag type, suburb, venue, deadline (keywords) | Working (in process of implementing gemini prompts so that tour dates and locations can be accurately extracted from all forms of sources
 | Genre filling with Gemini | Added |
 | `of_interest` flag (yes / no / unknown) | Added |
 | Write to Google Sheet with duplicate protection | Working |
