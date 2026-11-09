@@ -2,7 +2,7 @@
 
 A Google Sheet that automatically collects gigs, tours, grants, open calls and industry news relevant to Sydney artists, labels each item with a type and genre (using keywords plus Google's Gemini AI), flags what matches the genres I care about, and presents it in a filterable dashboard. Everything runs inside Google (Sheets + Apps Script) on a weekly timer. **Nothing needs to be installed on my computer.**
 
-**Status:** Backend working, dashboard and personalised emails in progress **Owner:** *your name* **Last updated:** 2026-11-09
+**Status:** Backend working, dashboard and personalised emails in progress **Owner:** Lisa Chao **Last updated:** 2026-11-09
 
 ---
 
@@ -30,15 +30,14 @@ A Google Sheet that automatically collects gigs, tours, grants, open calls and i
 
 ## 1. Purpose
 
-Keep my artists informed about where they can play, apply and network in Sydney, without anyone needing to check many websites.
+Keep artists informed about where they can play, apply and network in Sydney, without anyone needing to check many websites.
 
 **Success looks like**
 
 - Data refreshes weekly with no manual work
 - Everything links back to its original source
 - Only relevant genres are surfaced (hip hop, R&B / soul, pop), while grants, open calls and industry events always show
-- Artists open one link and see current, filterable data
-- Each artist eventually receives a short personalised weekly email
+- Each artist eventually receives a short personalised weekly email (drafted automatically with pre-specified template)
 
 ---
 
@@ -47,15 +46,16 @@ Keep my artists informed about where they can play, apply and network in Sydney,
 | Area | Status |
 | --- | --- |
 | Collect from RSS and Atom feeds | Working |
-| Collect from an agency tour list page (Cult Artists) | Added, to be tested |
+| Collect from an agency tour list page (Cult Artists) | Working |
 | Clean, tag type, suburb, venue, deadline (keywords) | Working |
 | Genre filling with Gemini | Working |
 | `of_interest` flag (yes / no / unknown) | Added |
 | Write to Google Sheet with duplicate protection | Working |
-| Weekly automatic run (trigger) | To set up or confirm |
+| Weekly automatic run (trigger) | To set up|
 | Dashboard tabs (Gigs, Opportunities, News, charts, slicers) | To build |
 | Gig dates from agency tour pages | Planned |
-| New World Artists tour dates | Planned (inspect page first) |
+| Take flight (source) | Planned,website currently under construction |
+| Sounds Australia | Planned, check whether to include (this website shows where AU astists perform around the world)
 | Personalised weekly email per artist | Planned |
 | Weekly digest email | Planned |
 
