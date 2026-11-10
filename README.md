@@ -133,6 +133,16 @@ One row per item in the `data` tab.
 | `no` | Has a genre, but none of it is on the interest list |
 | `unknown` | No genre could be worked out (for example, general industry news) |
 
+### The `Status` rule
+
+| Value | When |
+| --- | --- |
+| `planned` | Type is `grant`, `open_call` or `industry_event` (always relevant), **or** the genre matches the interest list |
+| `upcoming` | Has a genre, but none of it is on the interest list |
+| `no_date` | for general industry news |
+| `expired (removed from data)` | No genre could be worked out (for example, general industry news) |
+
+
 ---
 
 ## 5. Sources
