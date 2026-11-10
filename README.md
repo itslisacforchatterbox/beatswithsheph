@@ -144,25 +144,22 @@ Sources are listed in `CONFIG.SOURCES` in `Config.gs`. Source types (`kind`):
 
 | Source | Kind | Notes | Status |
 | --- | --- | --- | --- |
-| Music Feeds | rss | General Australian music news | Enabled, confirm with `testFeeds` |
-| Noise11 | rss | General music news | Enabled, confirm |
-| Rhythms | rss | General music news | Enabled, confirm |
-| The Live Wire | rss | General music news | Enabled, confirm |
-| Music NSW | rss | NSW peak body, opportunities | Enabled, confirm |
-| The Music Network | rss | Industry news | Enabled, confirm |
-| AU Dollars | rss | Melbourne hip-hop media network | Feed address untested |
+| Music Feeds | rss | General Australian music news | Enabled,working |
+| Noise11 | rss | General music news | Enabled, working |
+| Rhythms | rss | General music news | Enabled, working |
+| The Live Wire | rss | General music news | Enabled, working|
+| The Music Network | rss | Industry news | Enabled, working |
+| AU Dollars | rss | Melbourne hip-hop media network | Enabled, working |
 | Sounds Australia | rss | Export body, showcases and networking | Feed address untested |
-| Cult Artists | tour_list | Agency upcoming tours (titles and links, no dates yet) | Added, to test |
-| The Music | rss | **Blocked (HTTP 403).** Paused. Email sent or pending | Disabled |
-| New World Artists | planned | Tour dates page is well structured, run `inspectAgencyPage` first | Planned |
-| NewLevels | n/a | Label and management; no event list found on site | Waiting on a page to use |
+| Cult Artists | tour_list | Agency upcoming tours | Enabled, working |
+| New World Artists | tour_list | Rostered artists upcoming tours & events| Enabled, working |
+| Take flight | Planned,website currently under construction |
 
 **Rules for adding sources**
 
 1. Prefer an official feed. Check the site's terms and `robots.txt`.
-2. If a server returns 403, respect it. Do not disguise the script. Email the site instead.
-3. Test with `testFeeds` before relying on a source.
-4. Record findings (feed address, terms, quirks) in `docs/source-notes.md`.
+2. Test with `testFeeds` before relying on a source.
+
 
 ---
 
