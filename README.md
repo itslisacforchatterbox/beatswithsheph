@@ -208,50 +208,6 @@ All files live in one Apps Script project (Extensions > Apps Script inside the s
 
 ---
 
-## 8. Setup From Scratch
-
-Follow in order. Tick as you go.
-
-### A. The sheet
-
-- [ ] Create a Google Sheet (use a dedicated Google account if possible).
-- [ ] Create tabs: `data`, `log`, `clients`, `help`, plus dashboard tabs later.
-- [ ] Open **Extensions > Apps Script** and rename the project.
-
-### B. The code
-
-- [ ] Create the script files in section 7 (**+** next to "Files" > **Script**; Apps Script adds `.gs`).
-- [ ] Paste the backed-up code into each file.
-- [ ] Run any function once to save.
-
-### C. Permissions
-
-- [ ] On the first run, click **Review permissions**, choose your account, **Advanced**, **Go to (project) (unsafe)**, **Allow**. This is normal for your own scripts.
-
-### D. Gemini
-
-- [ ] Go to **aistudio.google.com/apikey** and click **Create API key** (not "Get code").
-- [ ] In Apps Script open **Project Settings** (gear), scroll to **Script Properties**, add `GEMINI_API_KEY` with the key, and save.
-- [ ] Run `checkGeminiKey`. Expect a length around 39, starting `AIza`, and `false` for both spaces and quote marks.
-- [ ] Run `listGeminiModels` and put a current **flash** or **flash-lite** name into `CONFIG.GEMINI.MODEL`.
-- [ ] Run `testGemini`.
-
-### E. First data run
-
-Run these in order, checking the log after each:
-
-1. [ ] `testFeeds`: which sources respond? Disable any that return 403, 404 or FAILED.
-2. [ ] `testCollector`: items found per source.
-3. [ ] `setupDataTab`: writes headers and formulas to the `data` tab (safe to rerun).
-4. [ ] `refreshInterestColumn`: adds the `of_interest` header in column P.
-5. [ ] `runPipeline`: should end `Done. Found N, added N new.`
-6. [ ] `runPipeline` again: should say `added 0` (proves duplicate protection works).
-7. [ ] `backfillGenres`: fills genres for any rows that were written without one.
-
-If a run is cut off at the 6-minute limit, run `backfillGenres` again. It continues where it left off.
-
----
-
 ## 9. Automation (Weekly Timer)
 
 ### A. Set the time zone
