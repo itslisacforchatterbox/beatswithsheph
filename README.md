@@ -121,8 +121,8 @@ One row per item in the `data` tab.
 | N | `days_to_deadline` | sheet formula | Deadline minus today |
 | O | `status` | sheet formula | `upcoming`, `closing_soon` (7 days or fewer), `expired` |
 | P | `of_interest` | script | `yes`, `no` or `unknown` (see below) |
-| Q | 'ai_date' | Gemini | dd-mm-yyyy |
-| R | 'ai_city' | Gemini | city name |
+| Q | `ai_date` | Gemini | dd-mm-yyyy |
+| R | `ai_city`| Gemini | city name |
 
 
 ### The `of_interest` rule
@@ -132,8 +132,6 @@ One row per item in the `data` tab.
 | `yes` | Type is `grant`, `open_call` or `industry_event` (always relevant), **or** the genre matches the interest list |
 | `no` | Has a genre, but none of it is on the interest list |
 | `unknown` | No genre could be worked out (for example, general industry news) |
-
-Dashboards should show `yes` and `unknown` and hide `no`. Rows are **flagged, not deleted**, so nothing is lost and the script doesn't re-classify the same items every week.
 
 ---
 
@@ -341,11 +339,9 @@ If a run is cut off at the 6-minute limit, run `backfillGenres` again. It contin
 
 ### Next up
 
-- [ ] **Run the new Cult Artists source** and check the results.
-- [ ] **Read dates from agency tour pages.** Cult Artists lists tours without dates, so the next step is opening each tour page (a page per tour) and extracting NSW dates and venues, probably with Gemini plus spot checks.
 - [ ] **New World Artists:** run `inspectAgencyPage`, then build a collector for its Tour Dates page (state filter, 5 pages).
 - [ ] **Add an `industry_event` type** (showcases, conferences, industry nights, workshops, panels) to answer "where can my artists network".
-- [ ] **Build the dashboard tabs** (This Week, Gigs, Opportunities, Networking, News) with slicers, charts and a "closing soon" flag.
+
 
 ### Personalised artist emails (planned)
 
@@ -358,8 +354,7 @@ If a run is cut off at the 6-minute limit, run `backfillGenres` again. It contin
 ### Later
 
 - Weekly digest email for all artists
-- Calendar (ICS) feed of gigs
-- Looker Studio dashboard on top of the same sheet, if the sheet feels too plain
+
 
 ---
 
@@ -451,13 +446,7 @@ sydney-gigs-dashboard/
 | Question | Options | Decision |
 | --- | --- | --- |
 | Run day and time | e.g. Monday 6am Sydney time | *TBC* |
-| Permission from The Music | Email sent? Reply? | *TBC* |
-| Permission from agencies | Email Cult Artists, New World Artists | *TBC* |
-| Which NewLevels page to use | News, events or artists page | *TBC* |
-| Dashboard style | Google Sheets only / Looker Studio later | *TBC* |
-| Personalised emails | Gmail drafts / email to myself | *TBC* |
-| Gemini tier | Free / paid (data-use terms) | *TBC* |
-| Repo visibility | Private / public | *TBC* (private suggested) |
+| Personalised emails | Gmail drafts / artist email address | *TBC* |
 
 ---
 
