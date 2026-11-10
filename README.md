@@ -70,7 +70,7 @@ flowchart LR
     C --> D["2 Clean<br/>tidy text, drop repeats"]
     D --> E["3 Remove items<br/>already in sheet"]
     E --> F["4 Enrich<br/>type, suburb, venue, deadline"]
-    F --> G["5 Gemini<br/>fills missing genres"]
+    F --> G["5 Gemini<br/>fills missing genres, extract date and venue, and fills in ai_date, ai_city"]
     G --> H["6 Write new rows<br/>plus of_interest flag"]
     H --> I[("data tab")]
     M["My notes<br/>why_it_matters"] --> I
