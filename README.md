@@ -50,13 +50,12 @@ Keep artists informed about where they can play, apply and network in Sydney, wi
 | Clean, tag type, venue, date | Added
 | Genre filling with Gemini | Added |
 | `of_interest` flag (yes / no / unknown) | Added |
-| Write to Google Sheet with duplicate protection | Working |
+| Write to Google Sheet with duplicate protection | Added |
 | Weekly automatic run (trigger) | To set up|
-| Dashboard tabs (Gigs, Opportunities, News, charts, slicers) | To build |
 | Gig dates from agency tour pages | Planned |
 | Take flight (source) | Planned,website currently under construction |
 | Sounds Australia | Planned, check whether to include (this website shows where AU astists perform around the world)
-| Personalised weekly email per artist | Planned |
+| Personalised weekly email per artist| Planned |
 | Weekly digest email | Planned |
 
 ---
@@ -70,16 +69,14 @@ flowchart LR
     C --> D["2 Clean<br/>tidy text, drop repeats"]
     D --> E["3 Remove items<br/>already in sheet"]
     E --> F["4 Enrich<br/>type, suburb, venue, deadline"]
-    F --> G["5 Gemini<br/>fills missing genres, extract date and venue, and fills in ai_date, ai_city"]
+    F --> G["5 Gemini<br/>fills missing genres, extract date and city, and fills in ai_date, ai_city"]
     G --> H["6 Write new rows<br/>plus of_interest flag"]
     H --> I[("data tab")]
     M["My notes<br/>why_it_matters"] --> I
-    I --> J["Dashboard tabs"]
-    J --> K["Artists<br/>view-only link"]
-    I -.planned.-> L["Personalised weekly<br/>emails as Gmail drafts"]
+    I --> J["Personalised weekly<br/>emails as Gmail drafts"]
 ```
 
-**In words:** once a week Google runs `runPipeline()`. It fetches the latest items from each source, tidies them, and skips anything already in the sheet. For the new items it works out the type (gig, grant, open call, news), suburb, venue and any deadline using keyword lists. Where no genre was found, it asks Gemini to choose from a fixed genre list. Finally it writes the new rows and marks each `yes`, `no` or `unknown` for genre interest.
+**In words:** once a week Google runs `runPipeline()`. It fetches the latest items from each source, tidies them, and skips anything already in the sheet. For the new items it works out the type (gig, grant, open call, news), suburb, venue and any deadline using keyword lists. Where no genre was found, it asks Gemini to choose from a fixed genre list. When the event date and suburb could not be extracted by the JavaScript, Gemini was also asked to extract them. Finally it writes the new rows and marks each `yes`, `no` or `unknown` for genre interest.
 
 | Step | What happens | Function | File |
 | --- | --- | --- | --- |
@@ -87,7 +84,7 @@ flowchart LR
 | 2 | Remove HTML, shorten snippets, drop repeats and unusable items | `cleanItems()` | `Clean.gs` |
 | 3 | Remove items whose ID is already in the sheet | `removeKnownItems()` | `SheetWriter.gs` |
 | 4 | Type, suburb, venue, genre keywords, deadline | `enrichItems()` | `Enrich.gs` |
-| 5 | Gemini fills blank genres | `addAiGenres_()` | `Gemini.gs` |
+| 5 | Gemini fills blank genres, dates, city | `addAiGenres_()` | `Gemini.gs` |
 | 6 | Add new rows and the `of_interest` flag | `writeNewItems()` | `SheetWriter.gs` |
 | 7 | Record the run in the `log` tab | `writeLog_()` | `SheetWriter.gs` |
 
@@ -124,6 +121,9 @@ One row per item in the `data` tab.
 | N | `days_to_deadline` | sheet formula | Deadline minus today |
 | O | `status` | sheet formula | `upcoming`, `closing_soon` (7 days or fewer), `expired` |
 | P | `of_interest` | script | `yes`, `no` or `unknown` (see below) |
+| Q | 'ai_date' | Gemini | dd-mm-yyyy |
+| R | 'ai_city' | Gemini | city name |
+
 
 ### The `of_interest` rule
 
