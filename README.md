@@ -119,7 +119,7 @@ One row per item in the `data` tab.
 | L | `date_collected` | script | When the script first saw it |
 | M | `why_it_matters` | **me, by hand** | My personal note |
 | N | `days_to_deadline` | sheet formula | Deadline minus today |
-| O | `status` | sheet formula | `upcoming`, `closing_soon` (7 days or fewer), `expired` |
+| O | `status` | gemini | `upcoming`, `this week` ,`planned`,`no_date`,`expired`|
 | P | `of_interest` | script | `yes`, `no` or `unknown` (see below) |
 | Q | `ai_date` | Gemini | dd-mm-yyyy |
 | R | `ai_city`| Gemini | city name |
