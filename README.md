@@ -137,10 +137,11 @@ One row per item in the `data` tab.
 
 | Value | When |
 | --- | --- |
-| `planned` | Type is `grant`, `open_call` or `industry_event` (always relevant), **or** the genre matches the interest list |
-| `upcoming` | Has a genre, but none of it is on the interest list |
+| `this week` |0-7 days|
+| `upcoming` |8-30 days|
+| `planned` | further out |
 | `no_date` | for general industry news |
-| `expired (removed from data)` | No genre could be worked out (for example, general industry news) |
+| `expired (removed from data)` | in the past |
 
 
 ---
