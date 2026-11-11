@@ -405,7 +405,7 @@ sydney-gigs-dashboard/
 ---
 
 ## 16. Open Decisions
-# 📬 Proposal: Personalised Weekly Opportunity Emails for Artists
+## 📬 Proposal: Personalised Weekly Opportunity Emails for Artists
 ---
 ## Summary
 
@@ -467,27 +467,6 @@ flowchart LR
 | Write the draft email | 🤖 Automated |
 | Review and adjust | 🧑 Human |
 | Press send | 🧑 Human |
-
-How to present these information?
-Proposal: Personalised Weekly Opportunity Emails for Artists
-Summary:
-Every week, the system turns the opportunity database (gigs, grants, open calls, industry events) into one short, personalised email per artist, saved as a Gmail draft. We read, adjust it if needed, and press send. Nothing is ever sent automatically. (it can be automated too if needed)
-The aim: each artist receives the five or so things most worth their attention this week, with a plain-language reason why each one fits them, instead of having to search ten websites. The only human steps are reviewing and tapping send. Collecting, matching and drafting are automated.
-What an Artist Receives:
-One email per week, with up to five picks, each showing:
-What it is, with a link to the original source
-When (date, or the closing date for applications) and where (venue and suburb)
-A one-line reason it fits that artist
-An optional personal note 
-
-Illustrative example (made-up content, for layout only):
-Subject: Your week in Sydney music: 4 picks
-Hi Sam, here are the best matches for you this week:
-Songwriting grant round, closes in 5 days. Fits what you're looking for: funding for your next EP. (link)
-Hip hop showcase night in Newtown, Fri 20 Nov. Matches your sound, and booking agents are expected to attend. (link)
-...
-Reply to this email if you want help with any of these.
-
 ---
 
 ## 17. Changelog
