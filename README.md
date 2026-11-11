@@ -215,7 +215,7 @@ All files live in one Apps Script project (Extensions > Apps Script inside the s
 
 ---
 
-## 9. Automation (Weekly Timer)
+## 8. Automation (Weekly Timer)
 
 ### A. Set the time zone
 
@@ -248,7 +248,7 @@ All files live in one Apps Script project (Extensions > Apps Script inside the s
 
 ---
 
-## 10. Routine Maintenance
+## 9. Routine Maintenance
 
 ### Every week (about 10 minutes)
 
@@ -281,7 +281,7 @@ All files live in one Apps Script project (Extensions > Apps Script inside the s
 
 ---
 
-## 11. Changing Settings (Quick Reference)
+## 10. Changing Settings (Quick Reference)
 
 | I want to... | Do this |
 | --- | --- |
@@ -298,7 +298,7 @@ All files live in one Apps Script project (Extensions > Apps Script inside the s
 
 ---
 
-## 12. Roadmap
+## 11. Roadmap
 
 ### Next up
 
@@ -321,7 +321,7 @@ All files live in one Apps Script project (Extensions > Apps Script inside the s
 
 ---
 
-## 13. Troubleshooting
+## 12. Troubleshooting
 
 | Problem | Likely cause | What to try |
 | --- | --- | --- |
@@ -347,7 +347,7 @@ All files live in one Apps Script project (Extensions > Apps Script inside the s
 
 ---
 
-## 14. Compliance, Privacy and Security
+## 13. Compliance, Privacy and Security
 
 **Content**
 
@@ -373,7 +373,7 @@ All files live in one Apps Script project (Extensions > Apps Script inside the s
 
 ---
 
-## 15. Backup and Documentation in GitHub
+## 14. Backup and Documentation in GitHub
 
 GitHub is for **notes and backup only**. No code runs there, and nothing needs installing.
 
@@ -404,7 +404,7 @@ sydney-gigs-dashboard/
 
 ---
 
-## 16. Open Decisions
+## 15. Open Decisions
 ## 📬 Proposal: Personalised Weekly Opportunity Emails for Artists
 ---
 ## Summary
@@ -469,7 +469,7 @@ flowchart LR
 | Press send | 🧑 Human |
 ---
 
-## 17. Changelog
+## 16. Changelog
 
 | Date | Change |
 | --- | --- |
