@@ -2,7 +2,7 @@
 
 A Google Sheet that automatically collects gigs, tours, grants, open calls and industry news relevant to Sydney artists, labels each item with a type and genre (using keywords plus Google's Gemini AI), flags what matches the genres I care about, and presents it in a filterable dashboard. Everything runs inside Google (Sheets + Apps Script) on a weekly timer. **Nothing needs to be installed on my computer.**
 
-**Status:** Backend working, dashboard and personalised emails in progress **Owner:** Lisa Chao **Last updated:** 2026-11-09
+**Status:** Backend working, dashboard and personalised emails in progress **Owner:** Lisa Chao **Last updated:** 2026-11-11
 
 ---
 
