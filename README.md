@@ -405,6 +405,68 @@ sydney-gigs-dashboard/
 ---
 
 ## 16. Open Decisions
+# 📬 Proposal: Personalised Weekly Opportunity Emails for Artists
+---
+## Summary
+
+Every week, the system turns the opportunity database (gigs, grants, open calls and industry events) into **one short, personalised email per artist**, saved as a **Gmail draft**.
+
+We read each draft, adjust it if needed, and press **send**. Nothing is ever sent automatically.
+
+> [!TIP]
+> Sending can be automated too if needed. Drafts are the recommended starting point, so a person checks every email until we trust the results.
+**The aim:** each artist receives the **five or so things most worth their attention this week**, with a plain-language reason why each one fits them, instead of having to search ten websites.
+
+## What an artist receives
+
+One email per week, with **up to five picks**. Each pick shows:
+
+- 🔗 **What it is**, with a link to the original source
+- 📅 **When**: the date, or the closing date for applications
+- 📍 **Where**: venue and suburb
+- 💬 **Why it fits**: a one-line reason it suits that artist
+- ✍️ **A personal note** from us (optional)
+
+### Example email
+
+> [!NOTE]
+> Made-up content, for layout only.
+
+> **Subject:** Your week in Sydney music: 4 picks
+>
+> Hi Sam, here are the best matches for you this week:
+>
+> **1. Songwriting grant round, closes in 5 days**
+> Why it fits: funding for your next EP.
+> 🔗 *link*
+>
+> **2. Hip hop showcase night in Newtown, Fri 20 Nov**
+> Why it fits: matches your sound, and booking agents are expected to attend.
+> 🔗 *link*
+>
+> **3. …**
+>
+> Reply to this email if you want help with any of these.
+
+---
+
+## How it works
+
+```mermaid
+flowchart LR
+    A["Opportunity<br/>database"] --> B["Match to<br/>each artist"]
+    B --> C["Draft email<br/>in Gmail"]
+    C --> D{"We review<br/>and adjust"}
+    D -->|approve| E["Press send"]
+```
+
+| Step | Who |
+|---|---|
+| Collect opportunities | 🤖 Automated |
+| Match them to each artist | 🤖 Automated |
+| Write the draft email | 🤖 Automated |
+| Review and adjust | 🧑 Human |
+| Press send | 🧑 Human |
 
 How to present these information?
 Proposal: Personalised Weekly Opportunity Emails for Artists
